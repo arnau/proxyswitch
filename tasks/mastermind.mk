@@ -50,3 +50,24 @@ test-api-call2:
 	@curl -ki \
         --proxy http://localhost:8080 \
         -XGET https://api.github.com/users/arnau/orgs
+
+schematics-architecture:
+	@docker run --rm -it \
+              -v $(PWD)/docs:/data \
+              arnau/mermaid mermaid --png \
+                                    -o schematics/ \
+                                    schematics/architecture.mmd
+schematics-driver:
+	@docker run --rm -it \
+              -v $(PWD)/docs:/data \
+              arnau/mermaid mermaid --png \
+                                    -o schematics/ \
+                                    schematics/driver-sequence.mmd
+
+schematics-driver-state:
+	@docker run --rm -it \
+              -v $(PWD)/docs:/data \
+              arnau/mermaid mermaid --png \
+                                    -o schematics/ \
+                                    schematics/driver-stateful.mmd
+
