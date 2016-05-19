@@ -1,5 +1,9 @@
 # Changelog
 
+## Next
+
+* Improve tests for the cli module that interacts with mitmproxy.
+
 ## 1.0.0-beta2
 
 * Fix CLI error handling.
