@@ -1,4 +1,4 @@
-import os
+from __future__ import (absolute_import, print_function, division)
 import subprocess
 
 branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).strip()

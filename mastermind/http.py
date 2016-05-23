@@ -1,7 +1,5 @@
-# from mitmproxy.models import Headers, HTTPResponse
-import mitmproxy
-
-print(dict(mitmproxy))
+from __future__ import (absolute_import, print_function, division)
+from mitmproxy.models import Headers, HTTPResponse
 
 status_codes = {100: "Continue",
                 101: "Switching Protocols",
